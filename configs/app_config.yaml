@@ -1,0 +1,37 @@
+# Application Configuration
+# Non-sensitive settings live here. Sensitive settings use environment variables.
+
+app:
+  name: "rag-system"
+  version: "0.1.0"
+  environment: "development"  # overridden by ENV env var
+
+chunking:
+  chunk_size: 800
+  chunk_overlap: 100
+  min_chunk_size: 50
+
+retrieval:
+  top_k_semantic: 10
+  top_k_bm25: 10
+  top_k_final: 5
+  similarity_threshold: 0.7
+
+embedding:
+  model_name: "sentence-transformers/all-MiniLM-L6-v2"
+  device: "cpu"
+  normalize_embeddings: true
+
+reranker:
+  model_name: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  max_length: 512
+
+paths:
+  data_dir: "data"
+  vector_store_dir: "data/vector_store"
+  evaluation_dir: "evaluations"
+  prompt_dir: "configs/prompts"
+
+logging:
+  level: "INFO"
+  format: "structured"

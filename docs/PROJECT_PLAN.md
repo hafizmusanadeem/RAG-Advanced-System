@@ -24,10 +24,9 @@ Configuration Management
 
 Goal:
 
-Centralized configuration.
+Ensure Repository Structure & Centralized configuration.
 
 Deliverables:
-
 - settings.py
 - environment management
 - config loading
